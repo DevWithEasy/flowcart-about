@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Check, Download } from 'lucide-react';
+import { SITE } from '../data/site';
 
 const INCLUDED = [
   'One-page express checkout engine',
@@ -65,17 +66,27 @@ export const Pricing: React.FC<PricingProps> = ({ onDownload }) => (
               ))}
             </ul>
 
-            <button
+            <a
+              href={SITE.pluginDownloadUrl}
+              download={SITE.pluginFileName}
               onClick={onDownload}
               className="group mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-ink py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5"
             >
               <Download className="h-4 w-4" />
-              Download FlowCart free
+              Download {SITE.pluginFileName}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
             <p className="mt-3 text-center font-mono text-[9.5px] uppercase tracking-wider text-ink/40">
               GPL · zip install · no telemetry
             </p>
+            <a
+              href={SITE.releasesUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-1 block text-center font-mono text-[9.5px] uppercase tracking-wider text-moss/70 underline decoration-dotted underline-offset-2 hover:text-moss"
+            >
+              all releases on GitHub
+            </a>
           </div>
         </div>
 

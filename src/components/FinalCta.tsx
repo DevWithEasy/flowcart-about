@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, ArrowUpRight, Github } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Download, Github } from 'lucide-react';
+import { SITE } from '../data/site';
 
 interface FinalCtaProps {
   onDownload: () => void;
@@ -29,15 +30,18 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onDownload }) => (
         </div>
 
         <div className="flex flex-col gap-3 sm:flex-row" data-reveal>
-          <button
+          <a
+            href={SITE.pluginDownloadUrl}
+            download={SITE.pluginFileName}
             onClick={onDownload}
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-4 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5"
           >
-            Download FlowCart free
+            <Download className="h-4 w-4" />
+            Download {SITE.pluginFileName}
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </button>
+          </a>
           <a
-            href="https://github.com/DevWithEasy/flowcart-about"
+            href={SITE.repoUrl}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/30 px-7 py-4 text-sm font-semibold text-ink transition-colors hover:border-ink hover:bg-ink/5"
