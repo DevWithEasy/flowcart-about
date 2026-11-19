@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, ShoppingCart } from 'lucide-react';
+import { SITE } from '../data/site';
 
 interface NavbarProps {
   onDownload: () => void;
@@ -50,6 +51,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onDownload }) => {
         <div className="flex items-center gap-2">
           <button
             onClick={onDownload}
+            data-download-cta
             className="group inline-flex items-center gap-1.5 rounded-full bg-lime px-4 py-2 text-[13px] font-semibold text-ink transition-transform hover:-translate-y-0.5"
           >
             Get it free

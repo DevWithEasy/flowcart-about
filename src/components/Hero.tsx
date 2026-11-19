@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowRight, Check, Zap } from 'lucide-react';
+import { ArrowRight, Check, Download, Zap } from 'lucide-react';
+import { SITE } from '../data/site';
 
 const LOGOS = [
   'WooCommerce',
@@ -215,13 +216,16 @@ export const Hero: React.FC<HeroProps> = ({ onDownload }) => {
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <button
+              <a
+                href={SITE.pluginDownloadUrl}
+                download={SITE.pluginFileName}
                 onClick={onDownload}
                 className="group inline-flex items-center justify-center gap-2 rounded-full bg-lime px-6 py-3.5 text-sm font-semibold text-ink transition-transform hover:-translate-y-0.5"
               >
+                <Download className="h-4 w-4" />
                 Download free — 0৳
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </button>
+              </a>
               <a
                 href="#how"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-ink-line px-6 py-3.5 text-sm font-medium text-paper/80 transition-colors hover:border-paper/40 hover:text-paper"

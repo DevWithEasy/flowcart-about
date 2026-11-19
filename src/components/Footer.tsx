@@ -1,5 +1,6 @@
 import React from 'react';
-import { ShoppingCart } from 'lucide-react';
+import { Download, ShoppingCart } from 'lucide-react';
+import { SITE } from '../data/site';
 
 const COLUMNS = [
   {
@@ -16,7 +17,7 @@ const COLUMNS = [
     links: [
       ['How it works', '#how'],
       ['FAQ', '#faq'],
-      ['Requirements', '#how']
+      ['All releases', SITE.releasesUrl]
     ]
   },
   {
@@ -44,7 +45,15 @@ export const Footer: React.FC = () => (
             One-page express checkout and funnel toolkit for WooCommerce. Built
             for COD-heavy stores in Bangladesh and beyond. Free forever.
           </p>
-          <p className="mt-5 font-mono text-[9.5px] uppercase tracking-[0.16em] text-paper/25">
+          <a
+            href={SITE.pluginDownloadUrl}
+            download={SITE.pluginFileName}
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-lime/40 px-4 py-2 text-[11.5px] font-semibold text-lime transition-colors hover:bg-lime hover:text-ink"
+          >
+            <Download className="h-3.5 w-3.5" />
+            Download {SITE.pluginFileName}
+          </a>
+          <p className="mt-4 font-mono text-[9.5px] uppercase tracking-[0.16em] text-paper/25">
             WooCommerce 7.5–9.x · Elementor · HPOS
           </p>
         </div>

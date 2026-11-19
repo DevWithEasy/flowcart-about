@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Check, Download, ShieldCheck, X } from 'lucide-react';
+import { Check, Download, ExternalLink, ShieldCheck, X } from 'lucide-react';
+import { SITE } from '../data/site';
 
 interface DownloadModalProps {
   open: boolean;
@@ -7,7 +8,7 @@ interface DownloadModalProps {
 }
 
 const STEPS = [
-  'Download the flowcart-plugin-v2.4.zip archive.',
+  `Download the ${SITE.pluginFileName} archive.`,
   'In WordPress go to Plugins → Add New → Upload Plugin.',
   'Choose the zip, click Install Now, then Activate.',
   'Open FlowCart in the admin menu and pick your checkout fields.'
@@ -20,15 +21,12 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ open, onClose }) =
 
   const download = () => {
     setStarted(true);
-    const blob = new Blob(
-      [
-        '/* FlowCart WordPress Plugin — v2.4 Free Edition */\n/* Full package available from the FlowCart repository. */\n'
-      ],
-      { type: 'application/zip' }
-    );
+    // Hand the real plugin archive to the browser — the browser will save it
+    // wherever the user's download folder is.
     const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = 'flowcart-plugin-v2.4.zip';
+    a.href = SITE.pluginDownloadUrl;
+    a.download = SITE.pluginFileName;
+    a.rel = 'noopener';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -46,7 +44,7 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ open, onClose }) =
         <div className="flex items-start justify-between border-b border-ink/10 bg-white px-5 py-4">
           <div>
             <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/40">
-              Free edition · v2.4
+              Free edition · v{SITE.version}
             </p>
             <h3 className="font-display text-lg font-semibold text-ink">
               {started ? 'You’re downloading FlowCart' : 'Get FlowCart free'}
@@ -83,7 +81,7 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ open, onClose }) =
                 className="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-ink py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5"
               >
                 <Download className="h-4 w-4" />
-                Download flowcart-plugin-v2.4.zip
+                Download {SITE.pluginFileName}
               </button>
             </>
           ) : (
@@ -91,8 +89,9 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ open, onClose }) =
               <div className="flex items-start gap-3 rounded-xl border border-moss/20 bg-moss/8 px-4 py-3">
                 <Check className="mt-0.5 h-4 w-4 shrink-0 text-moss" strokeWidth={3} />
                 <p className="text-[12.5px] leading-relaxed text-ink/70">
-                  <span className="font-semibold text-ink">flowcart-plugin-v2.4.zip</span>{' '}
-                  is on its way. Check your downloads folder.
+                  <span className="font-semibold text-ink">{SITE.pluginFileName}</span>{' '}
+                  is downloading from GitHub. If nothing happens after a few
+                  seconds, use the direct link below.
                 </p>
               </div>
               <ol className="mt-4 space-y-2">
@@ -105,9 +104,18 @@ export const DownloadModal: React.FC<DownloadModalProps> = ({ open, onClose }) =
                   </li>
                 ))}
               </ol>
+              <a
+                href={SITE.pluginDownloadUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl border border-ink/20 py-3 text-[12.5px] font-semibold text-ink hover:bg-paper-2"
+              >
+                <ExternalLink className="h-3.5 w-3.5" />
+                Direct download link
+              </a>
               <button
                 onClick={onClose}
-                className="mt-5 w-full rounded-xl border border-ink/20 py-3 text-sm font-semibold text-ink hover:bg-paper-2"
+                className="mt-2 w-full rounded-xl border border-ink/10 py-3 text-sm font-semibold text-ink/60 hover:bg-paper-2"
               >
                 Got it
               </button>
