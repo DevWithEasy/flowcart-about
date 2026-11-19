@@ -70,7 +70,7 @@ export default function App() {
         {/* Section 7: How It Works (3 Steps) */}
         <HowItWorks />
 
-        {/* Section 8: Elementor Widget Showcase (All 18 Widgets) */}
+        {/* Section 8: Elementor Widget Showcase (All 20 Widgets) */}
         <ElementorWidgets />
 
         {/* Section 9: Integrations and Compatibility */}

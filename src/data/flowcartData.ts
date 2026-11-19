@@ -10,8 +10,8 @@ export interface WidgetItem {
 
 export const ELEMENTOR_WIDGETS: WidgetItem[] = [
   {
-    id: 'ec-checkout-form',
-    name: 'EC - Checkout Form',
+    id: 'fc-checkout-form',
+    name: 'FlowCart - Checkout Form',
     shortCode: 'Checkout Form',
     category: 'checkout',
     description: 'Embeds a streamlined, conversion-ready 1-page checkout form anywhere inside Elementor pages or posts.',
@@ -19,8 +19,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Custom field mapping', 'Inline validation', 'AJAX submission']
   },
   {
-    id: 'ec-live-checkout',
-    name: 'EC - Live Checkout',
+    id: 'fc-live-checkout',
+    name: 'FlowCart - Live Checkout',
     shortCode: 'Live Checkout',
     category: 'checkout',
     description: 'Real-time interactive checkout container that updates totals and shipping without full page reloads.',
@@ -28,8 +28,17 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Instant total refresh', 'Dynamic gateway loader', 'Frictionless layout']
   },
   {
-    id: 'ec-action-button',
-    name: 'EC - Action Button',
+    id: 'fc-smart-combo-builder',
+    name: 'FlowCart - Smart Combo Builder',
+    shortCode: 'Smart Combo Builder',
+    category: 'merchandising',
+    description: 'Build profitable product combos and bundle packages where shoppers pick variations, add-ons, and quantities inside a single interactive offer block.',
+    elementorIcon: 'Boxes',
+    features: ['Multi-product bundles', 'Dynamic combo pricing', 'Variation & add-on picker']
+  },
+  {
+    id: 'fc-action-button',
+    name: 'FlowCart - Action Button',
     shortCode: 'Action Button',
     category: 'checkout',
     description: 'High-converting call-to-action button with direct checkout redirect, product pre-fill, or express trigger.',
@@ -37,8 +46,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Pre-selects variation', 'Custom button states', 'Deep-link ready']
   },
   {
-    id: 'ec-product-grid',
-    name: 'EC - Product Grid',
+    id: 'fc-product-grid',
+    name: 'FlowCart - Product Grid',
     shortCode: 'Product Grid',
     category: 'merchandising',
     description: 'Display products in a responsive grid layout with 1-click select and direct checkout integration.',
@@ -46,8 +55,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Column controls', 'Add-to-cart bypass', 'Price badges']
   },
   {
-    id: 'ec-product-showcase',
-    name: 'EC - Product Showcase',
+    id: 'fc-product-showcase',
+    name: 'FlowCart - Product Showcase',
     shortCode: 'Product Showcase',
     category: 'merchandising',
     description: 'Focused hero product presentation with gallery zoom, key specs, and attached checkout form.',
@@ -55,8 +64,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Hero presentation', 'Specification lists', 'Stock status indicator']
   },
   {
-    id: 'ec-shop-grid',
-    name: 'EC - Shop Grid',
+    id: 'fc-shop-grid',
+    name: 'FlowCart - Shop Grid',
     shortCode: 'Shop Grid',
     category: 'merchandising',
     description: 'Flexible catalog grid specifically designed for sales funnel landing pages and collection drops.',
@@ -64,8 +73,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Category filtering', 'Pagination / Load more', 'Sale tags']
   },
   {
-    id: 'ec-pricing-table',
-    name: 'EC - Pricing Table',
+    id: 'fc-pricing-table',
+    name: 'FlowCart - Pricing Table',
     shortCode: 'Pricing Table',
     category: 'merchandising',
     description: 'Tiered product pricing cards with featured plan highlight, discount badges, and direct buy links.',
@@ -73,8 +82,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Tier comparison', 'Badge callouts', 'Direct checkout trigger']
   },
   {
-    id: 'ec-offer-card',
-    name: 'EC - Offer Card',
+    id: 'fc-offer-card',
+    name: 'FlowCart - Offer Card',
     shortCode: 'Offer Card',
     category: 'urgency',
     description: 'Eye-catching discount card ideal for order bumps, cross-sells, and seasonal promotional bundles.',
@@ -82,8 +91,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['1-click checkbox bump', 'Discount callout', 'Highlight border']
   },
   {
-    id: 'ec-offer-bar',
-    name: 'EC - Offer Bar',
+    id: 'fc-offer-bar',
+    name: 'FlowCart - Offer Bar',
     shortCode: 'Offer Bar',
     category: 'urgency',
     description: 'Sticky or inline promotional banner announcing free shipping thresholds or limited-time savings.',
@@ -91,8 +100,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Sticky top/bottom', 'Threshold meter', 'Dismissible state']
   },
   {
-    id: 'ec-sales-popup',
-    name: 'EC - Sales Popup',
+    id: 'fc-sales-popup',
+    name: 'FlowCart - Sales Popup',
     shortCode: 'Sales Popup',
     category: 'urgency',
     description: 'Configurable on-page offer alert triggered by scroll position or exit intent to retain departing visitors.',
@@ -100,8 +109,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Scroll depth trigger', 'Exit-intent detection', 'One-click apply']
   },
   {
-    id: 'ec-countdown-timer',
-    name: 'EC - Countdown Timer',
+    id: 'fc-countdown-timer',
+    name: 'FlowCart - Countdown Timer',
     shortCode: 'Countdown Timer',
     category: 'urgency',
     description: 'Dynamic countdown clock for flash sales, pre-orders, and urgent checkout deadline incentives.',
@@ -109,8 +118,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Evergreen / Fixed time', 'Auto-hide on expiry', 'Customizable typography']
   },
   {
-    id: 'ec-flip-box',
-    name: 'EC - Flip Box',
+    id: 'fc-flip-box',
+    name: 'FlowCart - Flip Box',
     shortCode: 'Flip Box',
     category: 'merchandising',
     description: 'Interactive dual-sided card revealing detailed product benefits, customer guarantee, or bonus specs on hover.',
@@ -118,8 +127,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['3D flip animation', 'Dual-face content', 'Front/Back CTA']
   },
   {
-    id: 'ec-feature-card',
-    name: 'EC - Feature Card',
+    id: 'fc-feature-card',
+    name: 'FlowCart - Feature Card',
     shortCode: 'Feature Card',
     category: 'trust',
     description: 'Modular value proposition card highlighting key product advantages, shipping speeds, or warranty.',
@@ -127,8 +136,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Icon picker', 'Accent styling', 'Responsive spacing']
   },
   {
-    id: 'ec-product-carousel',
-    name: 'EC - Product Carousel',
+    id: 'fc-product-carousel',
+    name: 'FlowCart - Product Carousel',
     shortCode: 'Product Carousel',
     category: 'merchandising',
     description: 'Smooth touch-enabled slider displaying related products, accessories, or bundles right before checkout.',
@@ -136,8 +145,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Touch swipe', 'Autoplay options', 'Direct checkout link']
   },
   {
-    id: 'ec-size-guide',
-    name: 'EC - Size Guide',
+    id: 'fc-size-guide',
+    name: 'FlowCart - Size Guide',
     shortCode: 'Size Guide',
     category: 'trust',
     description: 'Pop-up or inline sizing measurement chart to reduce sizing questions and avoid product returns.',
@@ -145,8 +154,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Tabular metrics', 'Modal trigger', 'Unit switcher']
   },
   {
-    id: 'ec-support-card',
-    name: 'EC - Support Card',
+    id: 'fc-support-card',
+    name: 'FlowCart - Support Card',
     shortCode: 'Support Card',
     category: 'trust',
     description: 'Dedicated customer assistance card with direct WhatsApp, phone, or live email support details.',
@@ -154,8 +163,8 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['WhatsApp link', 'Call hotline', 'Business hours']
   },
   {
-    id: 'ec-thank-you-page',
-    name: 'EC - Thank You Page',
+    id: 'fc-thank-you-page',
+    name: 'FlowCart - Thank You Page',
     shortCode: 'Thank You Page',
     category: 'checkout',
     description: 'Customizable post-purchase confirmation widget with order recap, instructions, and next steps.',
@@ -163,13 +172,22 @@ export const ELEMENTOR_WIDGETS: WidgetItem[] = [
     features: ['Order summary display', 'Bank transfer details', 'Next steps guidance']
   },
   {
-    id: 'ec-trust-badges',
-    name: 'EC - Trust Badges',
+    id: 'fc-trust-badges',
+    name: 'FlowCart - Trust Badges',
     shortCode: 'Trust Badges',
     category: 'trust',
     description: 'Security and payment assurance badges (Cash on Delivery, SSL, Verified Merchant, Safe Payments).',
     elementorIcon: 'ShieldCheck',
     features: ['COD badge', 'Payment logos', 'Return guarantee']
+  },
+  {
+    id: 'fc-chatty-widget',
+    name: 'FlowCart - Chatty Widget',
+    shortCode: 'Chatty Widget',
+    category: 'trust',
+    description: 'Floating messenger-style chat bubble that keeps support and pre-sale questions one tap away on any funnel step.',
+    elementorIcon: 'MessageCircle',
+    features: ['Floating chat bubble', 'WhatsApp / Messenger connect', 'Pre-filled greeting']
   }
 ];
 
@@ -249,10 +267,10 @@ export const CORE_FEATURES: FeatureItem[] = [
   },
   {
     id: 'elementor-widgets',
-    title: 'Elementor Integration (18 Widgets)',
+    title: 'Elementor Integration (20 Widgets)',
     category: 'Page Builder',
-    description: 'Design beautiful, branded checkout pages with 18 specialized widgets crafted specifically for WooCommerce conversion.',
-    tag: '18 Widgets Included',
+    description: 'Design beautiful, branded checkout pages with 20 specialized widgets crafted specifically for WooCommerce conversion.',
+    tag: '20 Widgets Included',
     icon: 'Boxes'
   },
   {
@@ -289,48 +307,48 @@ export interface FaqItem {
 
 export const FAQS: FaqItem[] = [
   {
-    question: 'What is EasyFunnel?',
-    answer: 'EasyFunnel is a commercial WordPress plugin built for WooCommerce that transforms standard multi-step checkout processes into high-converting 1-page express checkout funnels. It includes custom checkout field management, drag-and-drop fields builder, product selection widgets, incomplete order capture, fraud protection, and 18 custom Elementor widgets.',
+    question: 'What is FlowCart?',
+    answer: 'FlowCart is a commercial WordPress plugin built for WooCommerce that transforms standard multi-step checkout processes into high-converting 1-page express checkout funnels. It includes custom checkout field management, drag-and-drop fields builder, product selection widgets, incomplete order capture, fraud protection, and 20 custom Elementor widgets.',
     category: 'General'
   },
   {
-    question: 'Does EasyFunnel work with WooCommerce?',
-    answer: 'Yes, EasyFunnel is built specifically for WooCommerce (version 7.x through the latest 9.x+). It seamlessly works with your existing WooCommerce products, shipping zones, tax settings, coupons, order emails, and payment gateways without modifying WooCommerce core tables.',
+    question: 'Does FlowCart work with WooCommerce?',
+    answer: 'Yes, FlowCart is built specifically for WooCommerce (version 7.x through the latest 9.x+). It seamlessly works with your existing WooCommerce products, shipping zones, tax settings, coupons, order emails, and payment gateways without modifying WooCommerce core tables.',
     category: 'Compatibility'
   },
   {
     question: 'Does it support Elementor?',
-    answer: 'Yes. EasyFunnel includes 18 custom Elementor widgets designed specifically for funnel building, including the Checkout Form, Live Checkout, Action Buttons, Product Showcases, Pricing Tables, Flip Boxes, Countdown Timers, and Trust Badges. It works with both Elementor Free and Elementor Pro.',
+    answer: 'Yes. FlowCart includes 20 custom Elementor widgets designed specifically for funnel building, including the Checkout Form, Live Checkout, Smart Combo Builder, Action Buttons, Product Showcases, Pricing Tables, Flip Boxes, Countdown Timers, Trust Badges, and the Chatty Widget. It works with both Elementor Free and Elementor Pro.',
     category: 'Builder'
   },
   {
     question: 'Can I customize checkout fields?',
-    answer: 'Absolutely. EasyFunnel provides both a Checkout Field Manager (to hide, show, rename, or reorder default WooCommerce fields like company, address line 2, or postal code) and a Drag-and-Drop Custom Fields Builder to create new fields (text, textarea, radio, select, date picker, notes) required for your store.',
+    answer: 'Absolutely. FlowCart provides both a Checkout Field Manager (to hide, show, rename, or reorder default WooCommerce fields like company, address line 2, or postal code) and a Drag-and-Drop Custom Fields Builder to create new fields (text, textarea, radio, select, date picker, notes) required for your store.',
     category: 'Customization'
   },
   {
     question: 'Does it support cash on delivery?',
-    answer: 'Yes, EasyFunnel includes specialized support for Cash on Delivery (COD) workflows. You can configure conditional delivery fees (such as inside city vs. outside city), display custom COD instructions, and enforce telephone confirmation.',
+    answer: 'Yes, FlowCart includes specialized support for Cash on Delivery (COD) workflows. You can configure conditional delivery fees (such as inside city vs. outside city), display custom COD instructions, and enforce telephone confirmation.',
     category: 'Payments'
   },
   {
     question: 'Which payment gateways are supported?',
-    answer: 'EasyFunnel supports standard WooCommerce payment gateways including Cash on Delivery (COD), Direct Bank Transfer (BACS), and popular international and regional gateways. For Bangladesh merchants, it offers dedicated support for bKash, Nagad, and local mobile banking workflows where supported.',
+    answer: 'FlowCart supports standard WooCommerce payment gateways including Cash on Delivery (COD), Direct Bank Transfer (BACS), and popular international and regional gateways. For Bangladesh merchants, it offers dedicated support for bKash, Nagad, and local mobile banking workflows where supported.',
     category: 'Payments'
   },
   {
     question: 'Is HPOS supported?',
-    answer: 'Yes, EasyFunnel is fully compatible with WooCommerce High-Performance Order Storage (HPOS). It works flawlessly with both the legacy post-based order tables and modern custom order tables, ensuring future-proof scalability for high-volume stores.',
+    answer: 'Yes, FlowCart is fully compatible with WooCommerce High-Performance Order Storage (HPOS). It works flawlessly with both the legacy post-based order tables and modern custom order tables, ensuring future-proof scalability for high-volume stores.',
     category: 'Technical'
   },
   {
     question: 'How do I get started?',
-    answer: 'Getting started takes three simple steps: 1) Install and activate the EasyFunnel plugin on your WordPress website. 2) Configure your checkout fields, shipping rates, and desired widgets in the EasyFunnel dashboard. 3) Select your funnel template or embed the checkout widget into your Elementor landing page and start taking orders.',
+    answer: 'Getting started takes three simple steps: 1) Install and activate the FlowCart plugin on your WordPress website. 2) Configure your checkout fields, shipping rates, and desired widgets in the FlowCart dashboard. 3) Select your funnel template or embed the checkout widget into your Elementor landing page and start taking orders.',
     category: 'Setup'
   },
   {
-    question: 'Is EasyFunnel really free to use?',
-    answer: 'Yes! EasyFunnel is currently 100% free with all features fully unlocked. You get unlimited access to the 1-Page Express Checkout, Drag-and-Drop Field Builder, Incomplete Order Tracker, Fraud Protection rules, Facebook Pixel integration, and all 18 Elementor custom widgets with zero cost and no credit card required.',
+    question: 'Is FlowCart really free to use?',
+    answer: 'Yes! FlowCart is currently 100% free with all features fully unlocked. You get unlimited access to the 1-Page Express Checkout, Drag-and-Drop Field Builder, Incomplete Order Tracker, Fraud Protection rules, Facebook Pixel integration, and all 20 Elementor custom widgets with zero cost and no credit card required.',
     category: 'Pricing'
   },
   {
@@ -352,15 +370,15 @@ export interface FreeEditionDetail {
 
 export const FREE_EDITION: FreeEditionDetail = {
   id: 'free-edition',
-  name: 'EasyFunnel 100% Free Edition',
+  name: 'FlowCart 100% Free Edition',
   badge: 'Complete Free Access',
-  description: 'Full-featured WooCommerce funnel & 1-page express checkout plugin. All 18 widgets and capabilities included at zero cost.',
+  description: 'Full-featured WooCommerce funnel & 1-page express checkout plugin. All 20 widgets and capabilities included at zero cost.',
   price: '$0',
   licenseText: 'Unlimited Websites · Free Forever',
   features: [
     '1-Page Express Checkout Engine',
     'Checkout Field Manager & Drag-Drop Custom Fields',
-    'All 18 Elementor Custom Widgets (Unrestricted)',
+    'All 20 Elementor Custom Widgets — incl. Smart Combo Builder & Chatty Widget (Unrestricted)',
     'Real-Time Incomplete Order Tracking & Lead Log',
     'Built-in Fraud Protection & IP Velocity Rules',
     'Facebook / Meta Pixel Event Tracking',

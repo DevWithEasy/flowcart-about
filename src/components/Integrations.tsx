@@ -31,13 +31,13 @@ export const Integrations: React.FC = () => {
       name: 'Elementor & Elementor Pro',
       version: 'v3.16 – v3.24+',
       description:
-        'Includes 18 bespoke widgets that drag directly into your Elementor editor without needing third-party add-on packs.',
+        'Includes 20 bespoke widgets that drag directly into your Elementor editor without needing third-party add-on packs.',
       icon: (
         <div className="w-8 h-8 rounded-lg bg-[#92003B] text-white font-bold text-xs flex items-center justify-center">
           E
         </div>
       ),
-      status: '18 Widgets Included',
+      status: '20 Widgets Included',
     },
     {
       name: 'High-Performance Order Storage (HPOS)',
@@ -84,7 +84,7 @@ export const Integrations: React.FC = () => {
             Fits Into Your Existing WooCommerce Workflow.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
-            No messy migrations or proprietary lock-in. EasyFunnel works alongside your favorite plugins and WordPress setup.
+            No messy migrations or proprietary lock-in. FlowCart works alongside your favorite plugins and WordPress setup.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export const Integrations: React.FC = () => {
         <div className="rounded-xl border border-slate-200 bg-white p-4 sm:p-5 flex items-start gap-3.5 max-w-4xl mx-auto">
           <AlertCircle className="w-5 h-5 text-slate-500 shrink-0 mt-0.5" />
           <div className="text-xs text-slate-600 leading-relaxed">
-            <strong className="text-slate-800 font-semibold">Compatibility Note:</strong> EasyFunnel is built and tested against standard WordPress and WooCommerce releases. Specific third-party payment gateways (e.g., bKash, Nagad merchant accounts) require their respective active gateway plugins. EasyFunnel operates directly inside your WordPress database without sending transaction data to third-party servers.
+            <strong className="text-slate-800 font-semibold">Compatibility Note:</strong> FlowCart is built and tested against standard WordPress and WooCommerce releases. Specific third-party payment gateways (e.g., bKash, Nagad merchant accounts) require their respective active gateway plugins. FlowCart operates directly inside your WordPress database without sending transaction data to third-party servers.
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Play, Layers } from 'lucide-react';
+import { Menu, X, ArrowRight, Play, ShoppingCart } from 'lucide-react';
 
 interface NavbarProps {
   onOpenLiveDemo: () => void;
@@ -21,7 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenLiveDemo, onOpenPricing })
   const navLinks = [
     { name: 'Features', href: '#features' },
     { name: 'How It Works', href: '#how-it-works' },
-    { name: '18 Widgets', href: '#widgets' },
+    { name: '20 Widgets', href: '#widgets' },
     { name: 'Integrations', href: '#integrations' },
     { name: 'Free Download', href: '#pricing' },
     { name: 'FAQ', href: '#faq' },
@@ -52,10 +52,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenLiveDemo, onOpenPricing })
             className="flex items-center gap-2.5 text-slate-900 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-600 rounded-md shrink-0"
           >
             <div className="w-9 h-9 rounded-lg bg-slate-900 flex items-center justify-center text-white shadow-xs">
-              <Layers className="w-5 h-5 text-blue-500" />
+              <ShoppingCart className="w-5 h-5 text-blue-500" />
             </div>
             <span className="font-bold text-xl tracking-tight text-slate-900 whitespace-nowrap">
-              EasyFunnel
+              FlowCart
             </span>
           </a>
 
@@ -146,7 +146,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenLiveDemo, onOpenPricing })
               }}
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-lg shadow-xs"
             >
-              <span>Download EasyFunnel Free</span>
+              <span>Download FlowCart Free</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

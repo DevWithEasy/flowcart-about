@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, HelpCircle, Search } from 'lucide-react';
-import { FAQS, FaqItem } from '../data/easyfunnelData';
+import { FAQS, FaqItem } from '../data/flowcartData';
 
 export const FaqAccordion: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -24,7 +24,7 @@ export const FaqAccordion: React.FC = () => {
             <span>Frequently Asked Questions</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 text-balance">
-            Everything You Need to Know About EasyFunnel.
+            Everything You Need to Know About FlowCart.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed max-w-2xl mx-auto">
             Clear, honest answers to common technical, compatibility, and licensing questions.

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Layers, ArrowUp, X, Shield, FileText, RefreshCw } from 'lucide-react';
+import { ShoppingCart, ArrowUp, X, Shield, FileText, RefreshCw } from 'lucide-react';
 
 interface FooterProps {
   onOpenLiveDemo: () => void;
@@ -21,10 +21,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLiveDemo, onOpenPricing })
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-2.5 text-white">
               <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow-xs">
-                <Layers className="w-4 h-4" />
+                <ShoppingCart className="w-4 h-4" />
               </div>
               <span className="font-bold text-lg tracking-tight text-white">
-                EasyFunnel
+                FlowCart
               </span>
             </div>
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
@@ -48,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLiveDemo, onOpenPricing })
               </li>
               <li>
                 <a href="#widgets" className="hover:text-white transition-colors">
-                  18 Elementor Widgets
+                  20 Elementor Widgets
                 </a>
               </li>
               <li>
@@ -156,7 +156,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLiveDemo, onOpenPricing })
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
           <div>
-            &copy; {new Date().getFullYear()} EasyFunnel. All rights reserved. WordPress and WooCommerce are registered trademarks of their respective owners.
+            &copy; {new Date().getFullYear()} FlowCart. All rights reserved. WordPress and WooCommerce are registered trademarks of their respective owners.
           </div>
           <button
             onClick={scrollToTop}
@@ -192,7 +192,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLiveDemo, onOpenPricing })
               {legalModal === 'privacy' && (
                 <>
                   <p>
-                    EasyFunnel is a self-hosted WordPress plugin that runs directly on your WordPress server. We do not store, intercept, or transmit your customers’ personal data, credit card information, or phone numbers to external servers.
+                    FlowCart is a self-hosted WordPress plugin that runs directly on your WordPress server. We do not store, intercept, or transmit your customers’ personal data, credit card information, or phone numbers to external servers.
                   </p>
                   <p>
                     All checkout inputs and incomplete order leads are stored exclusively in your own WooCommerce MySQL database. Meta Pixel tracking events are dispatched directly from the client browser to Meta according to your configured pixel settings.
@@ -203,10 +203,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLiveDemo, onOpenPricing })
               {legalModal === 'terms' && (
                 <>
                   <p>
-                    By activating and using EasyFunnel, you agree to comply with standard WordPress GPL guidelines and use valid site license keys according to your chosen plan.
+                    By activating and using FlowCart, you agree to comply with standard WordPress GPL guidelines and use valid site license keys according to your chosen plan.
                   </p>
                   <p>
-                    EasyFunnel provides software for checkout optimization. Store merchants are solely responsible for compliance with local sales tax laws, customer privacy standards, and payment processing regulations.
+                    FlowCart provides software for checkout optimization. Store merchants are solely responsible for compliance with local sales tax laws, customer privacy standards, and payment processing regulations.
                   </p>
                 </>
               )}
@@ -214,7 +214,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLiveDemo, onOpenPricing })
               {legalModal === 'refund' && (
                 <>
                   <p>
-                    We want you to be completely satisfied with EasyFunnel. We offer a 14-day refund policy for verifiable technical incompatibilities that our support team cannot resolve.
+                    We want you to be completely satisfied with FlowCart. We offer a 14-day refund policy for verifiable technical incompatibilities that our support team cannot resolve.
                   </p>
                   <p>
                     Please consult our technical documentation and verify plugin prerequisites (WordPress 6.x and WooCommerce 7.x+) before purchasing.

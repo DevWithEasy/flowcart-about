@@ -14,7 +14,7 @@ import {
   Cpu,
   Check
 } from 'lucide-react';
-import { CORE_FEATURES } from '../data/easyfunnelData';
+import { CORE_FEATURES } from '../data/flowcartData';
 
 export const FeaturesGrid: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('All');
@@ -75,7 +75,7 @@ export const FeaturesGrid: React.FC = () => {
             Everything You Need to Optimize Your WooCommerce Sales.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
-            Every feature in EasyFunnel is built specifically to remove purchasing barriers, speed up conversions, and simplify store administration.
+            Every feature in FlowCart is built specifically to remove purchasing barriers, speed up conversions, and simplify store administration.
           </p>
 
           {/* Interactive filter buttons */}

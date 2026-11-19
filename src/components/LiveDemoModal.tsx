@@ -65,7 +65,7 @@ export const LiveDemoModal: React.FC<LiveDemoModalProps> = ({
             </div>
             <div>
               <h3 className="text-sm font-bold leading-tight">
-                EasyFunnel Live Interactive Experience
+                FlowCart Live Interactive Experience
               </h3>
               <p className="text-[11px] text-slate-400">
                 Experience the 1-Page Express Checkout directly in your browser
@@ -122,7 +122,7 @@ export const LiveDemoModal: React.FC<LiveDemoModalProps> = ({
                   Demo Order Successfully Placed!
                 </h4>
                 <p className="text-xs text-slate-600 max-w-md mx-auto leading-relaxed">
-                  In an actual store, this triggers the WooCommerce <strong>EC - Thank You Page</strong> widget, synchronizes with HPOS, and dispatches customer SMS/email notifications.
+                  In an actual store, this triggers the WooCommerce <strong>FlowCart - Thank You Page</strong> widget, synchronizes with HPOS, and dispatches customer SMS/email notifications.
                 </p>
 
                 <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 max-w-sm mx-auto text-left text-xs space-y-2">
@@ -161,7 +161,7 @@ export const LiveDemoModal: React.FC<LiveDemoModalProps> = ({
                     }}
                     className="px-4 py-2 bg-slate-900 text-white text-xs font-bold rounded-lg hover:bg-slate-800"
                   >
-                    Get EasyFunnel Plugin
+                    Get FlowCart Plugin
                   </button>
                 </div>
               </div>
@@ -440,7 +440,7 @@ export const LiveDemoModal: React.FC<LiveDemoModalProps> = ({
         {/* Modal Footer */}
         <div className="bg-slate-50 px-5 py-3 border-t border-slate-200 flex items-center justify-between text-xs shrink-0">
           <span className="text-slate-500 text-[11px]">
-            EasyFunnel v2.4 · WooCommerce & HPOS Compatible
+            FlowCart v2.4 · WooCommerce & HPOS Compatible
           </span>
           <button
             type="button"
@@ -450,7 +450,7 @@ export const LiveDemoModal: React.FC<LiveDemoModalProps> = ({
             }}
             className="px-4 py-2 bg-slate-900 text-white font-bold rounded-lg hover:bg-slate-800 transition-colors"
           >
-            Get EasyFunnel
+            Get FlowCart
           </button>
         </div>
       </div>

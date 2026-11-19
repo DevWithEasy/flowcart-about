@@ -7,7 +7,7 @@ export const HowItWorks: React.FC = () => {
       step: '01',
       title: 'Install on WordPress',
       description:
-        'Upload the EasyFunnel plugin zip file to your WordPress Plugins directory and click Activate. EasyFunnel immediately connects with your WooCommerce store.',
+        'Upload the FlowCart plugin zip file to your WordPress Plugins directory and click Activate. FlowCart immediately connects with your WooCommerce store.',
       icon: DownloadCloud,
       metaText: 'Takes under 2 minutes',
       badge: 'Step 1'
@@ -43,7 +43,7 @@ export const HowItWorks: React.FC = () => {
             Launch a Better Checkout Experience in Three Simple Steps.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
-            EasyFunnel plugs directly into your existing WooCommerce store without complicated migrations, theme conflicts, or external checkout redirects.
+            FlowCart plugs directly into your existing WooCommerce store without complicated migrations, theme conflicts, or external checkout redirects.
           </p>
         </div>
 

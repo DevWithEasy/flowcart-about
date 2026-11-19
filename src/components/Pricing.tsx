@@ -1,6 +1,6 @@
 import React from 'react';
 import { Check, Download, ArrowRight, ShieldCheck, Sparkles, Layers, Cpu, Heart } from 'lucide-react';
-import { FREE_EDITION } from '../data/easyfunnelData';
+import { FREE_EDITION } from '../data/flowcartData';
 
 interface PricingProps {
   onDownloadFree: () => void;
@@ -19,7 +19,7 @@ export const Pricing: React.FC<PricingProps> = ({ onDownloadFree, onOpenLiveDemo
             Currently 100% Free for Every WooCommerce Store.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
-            EasyFunnel is completely free to use. All 18 Elementor custom widgets, 1-page express checkout, incomplete order tracking, and fraud protection features are fully unlocked with zero subscription fees.
+            FlowCart is completely free to use. All 20 Elementor custom widgets, 1-page express checkout, incomplete order tracking, and fraud protection features are fully unlocked with zero subscription fees.
           </p>
         </div>
 
@@ -31,7 +31,7 @@ export const Pricing: React.FC<PricingProps> = ({ onDownloadFree, onOpenLiveDemo
             </div>
             <div>
               <h4 className="text-sm font-bold text-slate-900 mb-1">
-                All 18 Widgets Included
+                All 20 Widgets Included
               </h4>
               <p className="text-xs text-slate-600 leading-relaxed">
                 No locked &quot;Pro&quot; tiers. Every single Elementor widget is free and ready to use on your store today.
@@ -76,7 +76,7 @@ export const Pricing: React.FC<PricingProps> = ({ onDownloadFree, onOpenLiveDemo
                 {FREE_EDITION.badge}
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
-                EasyFunnel Plugin v2.4
+                FlowCart Plugin v2.4
               </h3>
               <p className="text-xs text-slate-500 mt-1">
                 {FREE_EDITION.licenseText}
@@ -121,7 +121,7 @@ export const Pricing: React.FC<PricingProps> = ({ onDownloadFree, onOpenLiveDemo
               className="w-full sm:flex-1 py-3.5 px-6 rounded-xl text-xs sm:text-sm font-bold bg-slate-900 hover:bg-slate-800 text-white shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-600"
             >
               <Download className="w-4 h-4" />
-              <span>Download EasyFunnel Free (.zip)</span>
+              <span>Download FlowCart Free (.zip)</span>
             </button>
             <button
               type="button"

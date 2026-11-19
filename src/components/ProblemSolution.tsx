@@ -9,7 +9,7 @@ export const ProblemSolution: React.FC = () => {
         'Standard WooCommerce forces customers through Cart → Shipping Calculator → Login Prompt → Long Billing Form, causing high abandonment.',
       solutionTitle: '1-Page Express Checkout',
       solutionDesc:
-        'EasyFunnel consolidates product selection, customer details, and payment onto a single, high-converting one-page checkout.',
+        'FlowCart consolidates product selection, customer details, and payment onto a single, high-converting one-page checkout.',
     },
     {
       problemTitle: 'Unnecessary Form Friction',
@@ -23,7 +23,7 @@ export const ProblemSolution: React.FC = () => {
       problemTitle: 'Difficult Funnel & Page Setup',
       problemDesc:
         'Building sales landing pages and order bumps usually demands 4-5 conflicting plugins and messy PHP code snippets.',
-      solutionTitle: 'All-in-One Sales Funnel & 18 Widgets',
+      solutionTitle: 'All-in-One Sales Funnel & 20 Widgets',
       solutionDesc:
         'Design custom funnel steps, express buy buttons, countdown timers, and order bumps directly inside Elementor with native widgets.',
     },
@@ -33,7 +33,7 @@ export const ProblemSolution: React.FC = () => {
         'When shoppers type their phone number and abandon the page, standard WooCommerce leaves you with zero lead record or follow-up trail.',
       solutionTitle: 'Real-Time Incomplete Order Capture',
       solutionDesc:
-        'EasyFunnel saves customer details as they type, giving your sales team an actionable list to contact and recover abandoned carts.',
+        'FlowCart saves customer details as they type, giving your sales team an actionable list to contact and recover abandoned carts.',
     },
     {
       problemTitle: 'Limited Conversion Visibility',
@@ -56,7 +56,7 @@ export const ProblemSolution: React.FC = () => {
             Your Checkout Should Help You Sell, Not Lose Customers.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
-            Most WooCommerce stores suffer from friction-heavy default checkout flows. EasyFunnel replaces that friction with a focused, streamlined purchasing path.
+            Most WooCommerce stores suffer from friction-heavy default checkout flows. FlowCart replaces that friction with a focused, streamlined purchasing path.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export const ProblemSolution: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: EasyFunnel Solutions */}
+          {/* Right Column: FlowCart Solutions */}
           <div className="rounded-2xl border border-blue-200/80 bg-gradient-to-b from-blue-50/30 to-white p-6 sm:p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-6 pb-4 border-b border-blue-100">
               <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shrink-0">
@@ -105,7 +105,7 @@ export const ProblemSolution: React.FC = () => {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-slate-900">
-                  The EasyFunnel Experience
+                  The FlowCart Experience
                 </h3>
                 <p className="text-xs text-blue-700">
                   Engineered to capture and convert every interested buyer
