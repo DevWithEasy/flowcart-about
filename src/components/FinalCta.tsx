@@ -1,80 +1,68 @@
 import React from 'react';
-import { ArrowRight, Play, CheckCircle2, Shield } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Github } from 'lucide-react';
 
 interface FinalCtaProps {
-  onOpenLiveDemo: () => void;
-  onOpenPricing: () => void;
+  onDownload: () => void;
 }
 
-export const FinalCta: React.FC<FinalCtaProps> = ({
-  onOpenLiveDemo,
-  onOpenPricing,
-}) => {
-  return (
-    <section className="py-20 lg:py-28 bg-slate-950 text-white relative overflow-hidden">
-      {/* Decorative gradient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none" />
-
-      {/* Subtle grid lines */}
-      <div
-        className="absolute inset-0 pointer-events-none opacity-[0.05]"
-        style={{
-          backgroundImage:
-            'radial-gradient(#ffffff 1px, transparent 1px), radial-gradient(#ffffff 1px, #020617 1px)',
-          backgroundSize: '28px 28px',
-          backgroundPosition: '0 0, 14px 14px',
-        }}
-      />
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        {/* Eyebrow */}
-        <div className="inline-flex items-center gap-2 mb-4 text-xs font-bold tracking-wider text-emerald-400 uppercase">
-          <span>100% Free WordPress Plugin</span>
+export const FinalCta: React.FC<FinalCtaProps> = ({ onDownload }) => (
+  <section className="relative overflow-hidden bg-lime">
+    <div
+      aria-hidden
+      className="absolute inset-0 opacity-[0.16]"
+      style={{
+        backgroundImage:
+          'radial-gradient(#0b0b0d 1.2px, transparent 1.2px)',
+        backgroundSize: '20px 20px'
+      }}
+    />
+    <div className="relative mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+      <div className="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end">
+        <div data-reveal>
+          <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.22em] text-ink/50">
+            Ready when you are
+          </p>
+          <h2 className="max-w-2xl font-display text-[2.4rem] font-semibold leading-[0.98] tracking-[-0.035em] text-ink sm:text-[3.4rem]">
+            Stop losing orders
+            <span className="block font-serif italic">to a checkout form.</span>
+          </h2>
         </div>
 
-        {/* Headline */}
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-5 text-balance">
-          Ready to Build a Better WooCommerce Checkout?
-        </h2>
-
-        {/* Supporting text */}
-        <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-          Bring your checkout tools, sales funnel features, and store workflow together with FlowCart—completely free for every WooCommerce merchant.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+        <div className="flex flex-col gap-3 sm:flex-row" data-reveal>
           <button
-            onClick={onOpenPricing}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold text-slate-950 bg-white hover:bg-slate-100 rounded-xl shadow-lg transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-400"
+            onClick={onDownload}
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-4 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5"
           >
-            <span>Download FlowCart Free</span>
-            <ArrowRight className="w-4 h-4 text-slate-900" />
+            Download FlowCart free
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </button>
           <a
-            href="#features"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold text-white bg-slate-800/90 hover:bg-slate-800 border border-slate-700 rounded-xl transition-all"
+            href="https://github.com/DevWithEasy/flowcart-about"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/30 px-7 py-4 text-sm font-semibold text-ink transition-colors hover:border-ink hover:bg-ink/5"
           >
-            <span>Explore Features</span>
+            <Github className="h-4 w-4" />
+            View source
+            <ArrowUpRight className="h-3.5 w-3.5" />
           </a>
         </div>
-
-        {/* Trust Points */}
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-400">
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-blue-400" />
-            <span>20 Elementor Widgets Included</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-blue-400" />
-            <span>HPOS & WooCommerce 9.x Compatible</span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <CheckCircle2 className="w-4 h-4 text-blue-400" />
-            <span>Native COD & Local Gateway Ready</span>
-          </div>
-        </div>
       </div>
-    </section>
-  );
-};
+
+      <div className="mt-14 grid gap-3 border-t border-ink/20 pt-6 sm:grid-cols-3">
+        {[
+          ['20', 'Elementor widgets'],
+          ['0৳', 'no licence fee'],
+          ['1', 'page to checkout']
+        ].map(([k, v]) => (
+          <div key={v} className="flex items-baseline gap-2">
+            <span className="font-display text-xl font-semibold text-ink">{k}</span>
+            <span className="font-mono text-[9.5px] uppercase tracking-[0.16em] text-ink/50">
+              {v}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);

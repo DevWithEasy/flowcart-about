@@ -1,138 +1,127 @@
 import React from 'react';
-import { XCircle, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, Minus, Plus } from 'lucide-react';
 
-export const ProblemSolution: React.FC = () => {
-  const comparisons = [
-    {
-      problemTitle: 'Complicated Multi-Step Checkout',
-      problemDesc:
-        'Standard WooCommerce forces customers through Cart → Shipping Calculator → Login Prompt → Long Billing Form, causing high abandonment.',
-      solutionTitle: '1-Page Express Checkout',
-      solutionDesc:
-        'FlowCart consolidates product selection, customer details, and payment onto a single, high-converting one-page checkout.',
-    },
-    {
-      problemTitle: 'Unnecessary Form Friction',
-      problemDesc:
-        'Default checkouts require irrelevant fields like company name, postcodes, and country codes that slow down mobile buyers.',
-      solutionTitle: 'Custom Checkout Field Manager',
-      solutionDesc:
-        'Enable, disable, or reorder any field with a single click. Keep only essential fields like Customer Name and Phone Number.',
-    },
-    {
-      problemTitle: 'Difficult Funnel & Page Setup',
-      problemDesc:
-        'Building sales landing pages and order bumps usually demands 4-5 conflicting plugins and messy PHP code snippets.',
-      solutionTitle: 'All-in-One Sales Funnel & 20 Widgets',
-      solutionDesc:
-        'Design custom funnel steps, express buy buttons, countdown timers, and order bumps directly inside Elementor with native widgets.',
-    },
-    {
-      problemTitle: 'Lost & Incomplete Orders',
-      problemDesc:
-        'When shoppers type their phone number and abandon the page, standard WooCommerce leaves you with zero lead record or follow-up trail.',
-      solutionTitle: 'Real-Time Incomplete Order Capture',
-      solutionDesc:
-        'FlowCart saves customer details as they type, giving your sales team an actionable list to contact and recover abandoned carts.',
-    },
-    {
-      problemTitle: 'Limited Conversion Visibility',
-      problemDesc:
-        'Standard pixels frequently misfire during redirected checkout steps, giving Meta ads inaccurate purchase values and event data.',
-      solutionTitle: 'Accurate Event & Pixel Tracking',
-      solutionDesc:
-        'Fires standard Facebook/Meta events (PageView, AddToCart, InitiateCheckout, Purchase) cleanly with accurate cart totals.',
-    },
-  ];
+const PROBLEMS = [
+  {
+    n: '01',
+    title: 'Five steps before payment',
+    body: 'Cart → shipping calculator → login wall → billing form → gateway. Every hop is a chance to lose the buyer.'
+  },
+  {
+    n: '02',
+    title: 'Fields nobody needs',
+    body: 'Postcode, company, country code. On a phone, every extra field costs you completions.'
+  },
+  {
+    n: '03',
+    title: 'Abandoned orders vanish',
+    body: 'Someone types a phone number, hesitates, leaves. Default WooCommerce keeps no trace of them.'
+  },
+  {
+    n: '04',
+    title: 'Pixels miss the sale',
+    body: 'Redirects and multi-step pages break Meta events, so your ads optimise on bad purchase data.'
+  }
+];
 
-  return (
-    <section className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 mb-3 text-xs font-bold tracking-wider text-blue-600 uppercase">
-            <span>Checkout Optimization</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 text-balance">
-            Your Checkout Should Help You Sell, Not Lose Customers.
-          </h2>
-          <p className="text-slate-600 text-base leading-relaxed">
-            Most WooCommerce stores suffer from friction-heavy default checkout flows. FlowCart replaces that friction with a focused, streamlined purchasing path.
+const FIXES = [
+  'Product, details, delivery and payment on one screen',
+  'Only the fields you actually need — toggle the rest off',
+  'Phone number captured while they type, kept as a lead',
+  'PageView → InitiateCheckout → Purchase fired cleanly'
+];
+
+export const ProblemSolution: React.FC = () => (
+  <section id="why" className="relative bg-paper py-20 sm:py-28">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+        {/* left header */}
+        <div data-reveal>
+          <p className="mb-5 font-mono text-[10px] uppercase tracking-[0.22em] text-ink/40">
+            The Funnel Leak
           </p>
+          <h2 className="font-display text-[2.1rem] font-semibold leading-[1.02] tracking-[-0.03em] text-ink sm:text-[2.9rem]">
+            Most stores don&apos;t have a traffic problem.
+            <span className="mt-2 block font-serif italic text-clay">
+              They have a checkout problem.
+            </span>
+          </h2>
+          <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink/60">
+            WooCommerce ships a checkout built for catalogues, not for
+            campaign-driven sales. FlowCart rebuilds that path around the one
+            thing that matters: a finished order.
+          </p>
+
+          <div className="mt-9 inline-flex items-end gap-4 rounded-xl border border-ink bg-white px-5 py-4 shadow-hard">
+            <span className="font-display text-4xl font-semibold leading-none text-ink">
+              70%
+            </span>
+            <span className="max-w-[9rem] text-[11px] leading-snug text-ink/55">
+              of shoppers abandon a multi-step checkout before paying
+            </span>
+          </div>
         </div>
 
-        {/* 2-Column Comparison Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
-          {/* Left Column: Common Checkout Problems */}
-          <div className="rounded-2xl border border-red-200/70 bg-gradient-to-b from-red-50/30 to-white p-6 sm:p-8">
-            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-red-100">
-              <div className="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center shrink-0">
-                <XCircle className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-slate-900">
-                  Standard WooCommerce Friction
-                </h3>
-                <p className="text-xs text-red-700/80">
-                  Where store revenue silently drops off
-                </p>
-              </div>
+        {/* right: before / after */}
+        <div className="space-y-4" data-reveal style={{ ['--reveal-delay' as string]: '120ms' }}>
+          <div className="rounded-2xl border border-ink/12 bg-paper-2/70 p-5 sm:p-6">
+            <div className="mb-4 flex items-center justify-between">
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/40">
+                Default WooCommerce
+              </h3>
+              <span className="inline-flex items-center gap-1 rounded-full bg-ink/8 px-2 py-0.5 text-[10px] font-medium text-ink/50">
+                <Minus className="h-3 w-3" /> friction
+              </span>
             </div>
-
-            <div className="space-y-6">
-              {comparisons.map((item, index) => (
-                <div key={index} className="flex gap-3.5">
-                  <div className="pt-0.5 text-red-500 shrink-0">
-                    <XCircle className="w-4 h-4" />
+            <ul className="grid gap-2.5 sm:grid-cols-2">
+              {PROBLEMS.map((p) => (
+                <li
+                  key={p.n}
+                  className="rounded-xl border border-ink/10 bg-white/60 px-3.5 py-3"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-[10px] text-clay">{p.n}</span>
+                    <span className="text-[13px] font-semibold text-ink/85">
+                      {p.title}
+                    </span>
+                    <ArrowDownRight className="ml-auto h-3.5 w-3.5 text-clay/70" />
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-800 mb-1">
-                      {item.problemTitle}
-                    </h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {item.problemDesc}
-                    </p>
-                  </div>
-                </div>
+                  <p className="mt-1.5 text-[11.5px] leading-relaxed text-ink/50">
+                    {p.body}
+                  </p>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
-          {/* Right Column: FlowCart Solutions */}
-          <div className="rounded-2xl border border-blue-200/80 bg-gradient-to-b from-blue-50/30 to-white p-6 sm:p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-blue-100">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center shrink-0">
-                <CheckCircle2 className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-slate-900">
-                  The FlowCart Experience
+          <div className="relative overflow-hidden rounded-2xl border border-ink bg-ink p-5 text-paper sm:p-6">
+            <div className="grid-lines absolute inset-0 opacity-[0.15]" />
+            <div className="relative">
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="font-mono text-[10px] uppercase tracking-[0.2em] text-paper/40">
+                  With FlowCart
                 </h3>
-                <p className="text-xs text-blue-700">
-                  Engineered to capture and convert every interested buyer
-                </p>
+                <span className="inline-flex items-center gap-1 rounded-full bg-lime px-2 py-0.5 text-[10px] font-semibold text-ink">
+                  <Plus className="h-3 w-3 stroke-[3]" /> conversion
+                </span>
               </div>
-            </div>
-
-            <div className="space-y-6">
-              {comparisons.map((item, index) => (
-                <div key={index} className="flex gap-3.5">
-                  <div className="pt-0.5 text-emerald-600 shrink-0">
-                    <CheckCircle2 className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slate-900 mb-1 flex items-center gap-2">
-                      <span>{item.solutionTitle}</span>
-                    </h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">
-                      {item.solutionDesc}
-                    </p>
-                  </div>
-                </div>
-              ))}
+              <ul className="space-y-2.5">
+                {FIXES.map((f) => (
+                  <li
+                    key={f}
+                    className="flex items-start gap-3 rounded-xl border border-ink-line bg-ink-soft/70 px-3.5 py-3"
+                  >
+                    <ArrowUpRight className="mt-0.5 h-3.5 w-3.5 shrink-0 text-lime" />
+                    <span className="text-[12.5px] leading-relaxed text-paper/80">
+                      {f}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
