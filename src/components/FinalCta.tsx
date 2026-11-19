@@ -39,7 +39,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({
 
         {/* Supporting text */}
         <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
-          Bring your checkout tools, sales funnel features, and store workflow together with EasyFunnel—completely free for every WooCommerce merchant.
+          Bring your checkout tools, sales funnel features, and store workflow together with FlowCart—completely free for every WooCommerce merchant.
         </p>
 
         {/* CTA Buttons */}
@@ -48,7 +48,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({
             onClick={onOpenPricing}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold text-slate-950 bg-white hover:bg-slate-100 rounded-xl shadow-lg transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-400"
           >
-            <span>Download EasyFunnel Free</span>
+            <span>Download FlowCart Free</span>
             <ArrowRight className="w-4 h-4 text-slate-900" />
           </button>
           <a
@@ -63,7 +63,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-400">
           <div className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-blue-400" />
-            <span>18 Elementor Widgets Included</span>
+            <span>20 Elementor Widgets Included</span>
           </div>
           <div className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-blue-400" />

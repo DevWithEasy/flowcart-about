@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { X, Check, Download, Layers, ShieldCheck, Sparkles, Terminal, FileCode } from 'lucide-react';
-import { FREE_EDITION } from '../data/easyfunnelData';
+import { FREE_EDITION } from '../data/flowcartData';
 
 interface CheckoutModalProps {
   isOpen: boolean;
@@ -20,16 +20,16 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
     if (e) e.preventDefault();
     setDownloadStarted(true);
 
-    // Create a mock easyfunnel.zip dummy file download for the user
+    // Create a mock flowcart.zip dummy file download for the user
     const element = document.createElement('a');
     const file = new Blob(
       [
-        '/* EasyFunnel WordPress Plugin Package v2.4 (100% Free Edition) */\n/* Visit https://easyfunnel.com for documentation */\n'
+        '/* FlowCart WordPress Plugin Package v2.4 (100% Free Edition) */\n/* Documentation: FlowCart plugin readme.txt */\n'
       ],
       { type: 'application/zip' }
     );
     element.href = URL.createObjectURL(file);
-    element.download = 'easyfunnel-plugin-v2.4.zip';
+    element.download = 'flowcart-plugin-v2.4.zip';
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -51,7 +51,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             </div>
             <div>
               <h3 className="text-base font-bold leading-tight">
-                Download EasyFunnel Free
+                Download FlowCart Free
               </h3>
               <p className="text-xs text-slate-400">
                 Version 2.4 · 100% Free for WooCommerce
@@ -80,7 +80,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   Download Started!
                 </h4>
                 <p className="text-xs text-slate-600 mt-1">
-                  Your <code className="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-slate-800">easyfunnel-plugin-v2.4.zip</code> file is downloading.
+                  Your <code className="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-slate-800">flowcart-plugin-v2.4.zip</code> file is downloading.
                 </p>
               </div>
 
@@ -102,7 +102,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                     2
                   </span>
                   <span className="text-slate-600">
-                    Select the downloaded <strong>easyfunnel-plugin-v2.4.zip</strong> file and click <strong>Install Now</strong>.
+                    Select the downloaded <strong>flowcart-plugin-v2.4.zip</strong> file and click <strong>Install Now</strong>.
                   </span>
                 </div>
                 <div className="flex items-start gap-2.5">
@@ -110,7 +110,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                     3
                   </span>
                   <span className="text-slate-600">
-                    Click <strong>Activate Plugin</strong>. All 18 Elementor widgets and the 1-Page Express Checkout will be ready!
+                    Click <strong>Activate Plugin</strong>. All 20 Elementor widgets and the 1-Page Express Checkout will be ready!
                   </span>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   </span>
                 </div>
                 <p className="text-emerald-800 text-[11px] leading-relaxed">
-                  Includes all 18 Elementor custom widgets, 1-page express checkout, incomplete order tracking, and fraud protection for unlimited WooCommerce stores.
+                  Includes all 20 Elementor custom widgets, 1-page express checkout, incomplete order tracking, and fraud protection for unlimited WooCommerce stores.
                 </p>
               </div>
 
@@ -174,7 +174,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   className="w-full py-3.5 bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-600"
                 >
                   <Download className="w-4 h-4" />
-                  <span>Download EasyFunnel Free (.zip)</span>
+                  <span>Download FlowCart Free (.zip)</span>
                 </button>
               </div>
 

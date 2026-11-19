@@ -56,7 +56,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLiveDemo, onOpenPricing }) => 
 
           {/* Supporting description */}
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto mb-8">
-            Build streamlined checkout experiences, create high-converting sales funnels, and manage your WooCommerce orders with EasyFunnel—all from one powerful WordPress plugin.
+            Build streamlined checkout experiences, create high-converting sales funnels, and manage your WooCommerce orders with FlowCart—all from one powerful WordPress plugin.
           </p>
 
           {/* Call to actions */}
@@ -65,7 +65,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLiveDemo, onOpenPricing }) => 
               onClick={onOpenPricing}
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-xl shadow-md hover:shadow-lg transition-all focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-600"
             >
-              <span>Download EasyFunnel Free</span>
+              <span>Download FlowCart Free</span>
               <ArrowRight className="w-4 h-4" />
             </button>
             <button
@@ -81,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLiveDemo, onOpenPricing }) => 
           <div className="text-xs text-slate-500 font-medium flex items-center justify-center gap-2 flex-wrap">
             <span className="text-emerald-700 font-semibold bg-emerald-50 px-2 py-0.5 rounded">100% Free Forever</span>
             <span aria-hidden="true">·</span>
-            <span>All 18 Elementor Widgets Unlocked</span>
+            <span>All 20 Elementor Widgets Unlocked</span>
             <span aria-hidden="true">·</span>
             <span>No Credit Card Required</span>
           </div>
@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLiveDemo, onOpenPricing }) => 
                 <div className="w-5 h-5 rounded-full bg-slate-700 flex items-center justify-center text-[10px] font-bold text-white">
                   W
                 </div>
-                <span className="font-semibold text-white">EasyFunnel</span>
+                <span className="font-semibold text-white">FlowCart</span>
                 <span className="hidden sm:inline text-slate-400">·</span>
                 <span className="hidden sm:inline text-slate-400">WooCommerce Express Checkout</span>
               </div>
@@ -118,7 +118,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLiveDemo, onOpenPricing }) => 
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-slate-900 leading-tight">
-                    EasyFunnel Management Dashboard
+                    FlowCart Management Dashboard
                   </h3>
                   <p className="text-[11px] text-slate-500">
                     Live Plugin Configuration · Express Funnel Settings
@@ -437,7 +437,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenLiveDemo, onOpenPricing }) => 
 
             {/* Admin Footer Bar */}
             <div className="bg-slate-50 px-4 py-2.5 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-500">
-              <span>EasyFunnel for WooCommerce · Ready for Elementor</span>
+              <span>FlowCart for WooCommerce · Ready for Elementor</span>
               <button
                 onClick={onOpenLiveDemo}
                 className="text-blue-600 font-semibold hover:underline inline-flex items-center gap-1"

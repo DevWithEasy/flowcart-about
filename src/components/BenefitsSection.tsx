@@ -6,14 +6,14 @@ export const BenefitsSection: React.FC = () => {
     {
       title: 'Eliminate Redundant Checkout Steps',
       description:
-        'Standard WooCommerce flows lose buyers between the cart, account creation, and shipping calculation pages. EasyFunnel condenses all actions into one focused viewport.',
+        'Standard WooCommerce flows lose buyers between the cart, account creation, and shipping calculation pages. FlowCart condenses all actions into one focused viewport.',
       icon: TrendingUp,
       highlight: 'Single-Viewport Experience',
     },
     {
       title: 'Optimized for Mobile Shoppers',
       description:
-        'Over 75% of social media traffic shops on smartphones. EasyFunnel provides large touch targets, simplified inputs, and instant payment switches.',
+        'Over 75% of social media traffic shops on smartphones. FlowCart provides large touch targets, simplified inputs, and instant payment switches.',
       icon: Smartphone,
       highlight: 'Thumb-Friendly Layout',
     },
@@ -41,7 +41,7 @@ export const BenefitsSection: React.FC = () => {
             <span>Commercial Advantages</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 text-balance">
-            Why WooCommerce Merchants Choose EasyFunnel.
+            Why WooCommerce Merchants Choose FlowCart.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
             Engineered from real store requirements to deliver tangible conversion improvements and cleaner order management.

@@ -23,7 +23,7 @@ export const TrustBar: React.FC = () => {
     },
     {
       title: 'Elementor Integration',
-      detail: '18 Custom Widgets Included',
+      detail: '20 Custom Widgets Included',
       icon: (
         <div className="w-5 h-5 rounded-md bg-[#92003B] text-white font-bold text-xs flex items-center justify-center shrink-0">
           E

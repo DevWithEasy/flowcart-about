@@ -18,11 +18,15 @@ import {
   Headphones,
   Receipt,
   ShieldCheck,
+  Boxes,
+  MessageCircle,
   Search,
   Check,
   X
 } from 'lucide-react';
-import { ELEMENTOR_WIDGETS, WidgetItem } from '../data/easyfunnelData';
+import { ELEMENTOR_WIDGETS, WidgetItem } from '../data/flowcartData';
+
+const WIDGET_COUNT = ELEMENTOR_WIDGETS.length;
 
 export const ElementorWidgets: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -50,6 +54,8 @@ export const ElementorWidgets: React.FC = () => {
       case 'Headphones': return <Headphones className={iconClass} />;
       case 'Receipt': return <Receipt className={iconClass} />;
       case 'ShieldCheck': return <ShieldCheck className={iconClass} />;
+      case 'Boxes': return <Boxes className={iconClass} />;
+      case 'MessageCircle': return <MessageCircle className={iconClass} />;
       default: return <Package className={iconClass} />;
     }
   };
@@ -68,13 +74,13 @@ export const ElementorWidgets: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 mb-3 text-xs font-bold tracking-wider text-blue-600 uppercase">
-            <span>Elementor Add-on Suite</span>
+            <span>Included Elementor Widgets ({WIDGET_COUNT})</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 text-balance">
-            18 Powerful Widgets. More Ways to Build.
+            {WIDGET_COUNT} Powerful Widgets. More Ways to Build.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
-            Every widget is designed from the ground up to drag-and-drop seamlessly into your Elementor canvas, fully styled and linked to WooCommerce checkout actions.
+            Available under the “FlowCart” category in Elementor. Every widget is designed from the ground up to drag-and-drop seamlessly into your canvas, fully styled and linked to WooCommerce checkout actions.
           </p>
 
           {/* Search & Category Filter Controls */}
@@ -92,7 +98,7 @@ export const ElementorWidgets: React.FC = () => {
 
             <div className="flex flex-wrap items-center justify-center gap-1 p-1 bg-slate-100 rounded-lg text-xs">
               {[
-                { id: 'all', label: 'All (18)' },
+                { id: 'all', label: `All (${WIDGET_COUNT})` },
                 { id: 'checkout', label: 'Checkout' },
                 { id: 'merchandising', label: 'Merchandising' },
                 { id: 'urgency', label: 'Urgency & Offers' },
@@ -115,7 +121,7 @@ export const ElementorWidgets: React.FC = () => {
           </div>
         </div>
 
-        {/* 18 Widgets Responsive Grid */}
+        {/* Responsive widget grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredWidgets.map((widget) => (
             <div
@@ -196,7 +202,7 @@ export const ElementorWidgets: React.FC = () => {
                 </div>
 
                 <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 font-mono text-[11px] text-slate-600">
-                  Elementor Registry ID: <span className="text-blue-700 font-semibold">easyfunnel_{activeWidgetModal.id.replace(/-/g, '_')}</span>
+                  Elementor Registry ID: <span className="text-blue-700 font-semibold">flowcart_{activeWidgetModal.id.replace(/^fc-/, '').replace(/-/g, '_')}</span>
                 </div>
               </div>
 

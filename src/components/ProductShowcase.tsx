@@ -62,7 +62,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
             <span>Interactive Product Tour</span>
           </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 text-balance">
-            See How EasyFunnel Transforms Your WooCommerce Workflow.
+            See How FlowCart Transforms Your WooCommerce Workflow.
           </h2>
           <p className="text-slate-600 text-base leading-relaxed">
             Click through the core modules below to explore real interface layouts, configuration settings, and checkout behaviors.
@@ -430,7 +430,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                         3
                       </div>
                       <div>
-                        <div className="text-xs font-bold text-slate-900">EC - Thank You Page</div>
+                        <div className="text-xs font-bold text-slate-900">FlowCart - Thank You Page</div>
                         <div className="text-[11px] text-slate-500">Invoice summary, COD verification note & WhatsApp help</div>
                       </div>
                     </div>

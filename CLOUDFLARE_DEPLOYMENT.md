@@ -1,4 +1,4 @@
-# EasyFunnel — Cloudflare Pages Deployment Guide (বাংলা ও English)
+# FlowCart — Cloudflare Pages Deployment Guide (বাংলা ও English)
 
 প্রজেক্টটি **Cloudflare Pages**-এ ডিপ্লয় করার জন্য সম্পূর্ণ প্রস্তুত করা হয়েছে।
 
@@ -27,13 +27,13 @@
 3. বাম পাশের মেনু থেকে **Workers & Pages** &gt; **Create application** &gt; **Pages** ট্যাবে যান।
 4. **Connect to Git** নির্বাচন করুন এবং আপনার রিপোজিটরি সিলেক্ট করুন।
 5. **Set up builds and deployments** পেইজে নিচের সেটিংস দিন:
-   - **Project name**: `easyfunnel-landing` (বা আপনার পছন্দের নাম)
+   - **Project name**: `flowcart-landing` (বা আপনার পছন্দের নাম)
    - **Production branch**: `main`
    - **Framework preset**: `Vite`
    - **Build command**: `npm run build`
    - **Build output directory**: `dist`
 6. **Save and Deploy** বাটনে ক্লিক করুন।
-7. ১-২ মিনিটের মধ্যে আপনার সাইট লাইভ হয়ে যাবে (যেমন: `easyfunnel-landing.pages.dev`)!
+7. ১-২ মিনিটের মধ্যে আপনার সাইট লাইভ হয়ে যাবে (যেমন: `flowcart-landing.pages.dev`)!
 
 ---
 
@@ -57,7 +57,7 @@
    ```
    *বা ম্যানুয়াল কমান্ড:*
    ```bash
-   npx wrangler pages deploy dist --project-name=easyfunnel-landing
+   npx wrangler pages deploy dist --project-name=flowcart-landing
    ```
 
 ---
@@ -68,7 +68,7 @@
 
 1. আপনার কম্পিউটারে `npm run build` কমান্ড চালান। এতে `dist` ফোল্ডার তৈরি হবে।
 2. Cloudflare ড্যাশবোর্ডে যান: **Workers & Pages** &gt; **Create application** &gt; **Pages** &gt; **Upload assets**।
-3. প্রোজেক্টের নাম দিন (যেমন: `easyfunnel-landing`)।
+3. প্রোজেক্টের নাম দিন (যেমন: `flowcart-landing`)।
 4. আপনার কম্পিউটারের তৈরি হওয়া `dist` ফোল্ডারটি ড্র্যাগ অ্যান্ড ড্রপ করে আপলোড করে দিন।
 5. **Deploy site** বাটনে ক্লিক করলেই লাইভ হয়ে যাবে।
 
@@ -78,5 +78,5 @@
 
 সাইট ডিপ্লয় হওয়ার পর Cloudflare Pages ড্যাশবোর্ডে:
 1. আপনার প্রোজেক্টে ঢুকুন &gt; **Custom domains** ট্যাবে যান।
-2. **Set up a custom domain**-এ ক্লিক করে আপনার ডোমেইন (যেমন: `easyfunnel.com` বা `funnel.yourdomain.com`) লিখুন।
+2. **Set up a custom domain**-এ ক্লিক করে আপনার ডোমেইন (যেমন: `flowcart.com` বা `funnel.yourdomain.com`) লিখুন।
 3. Cloudflare অটোমেটিক ফ্রি SSL সার্টিফিকেট এবং CDN সক্রিয় করে দিবে।
