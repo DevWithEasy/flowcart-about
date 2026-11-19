@@ -1,143 +1,110 @@
 import React from 'react';
-import { Check, Download, ArrowRight, ShieldCheck, Sparkles, Layers, Cpu, Heart } from 'lucide-react';
-import { FREE_EDITION } from '../data/flowcartData';
+import { ArrowRight, Check, Download } from 'lucide-react';
+
+const INCLUDED = [
+  'One-page express checkout engine',
+  'Checkout field manager + custom fields',
+  'All 20 Elementor widgets unlocked',
+  'Incomplete order tracking & lead log',
+  'Fraud protection rules',
+  'Meta pixel event tracking',
+  'COD + bKash / Nagad / Rocket flows',
+  'HPOS & AJAX synced',
+  'Unlimited personal, client or commercial stores',
+  'Free updates & documentation'
+];
 
 interface PricingProps {
-  onDownloadFree: () => void;
-  onOpenLiveDemo: () => void;
+  onDownload: () => void;
 }
 
-export const Pricing: React.FC<PricingProps> = ({ onDownloadFree, onOpenLiveDemo }) => {
-  return (
-    <section id="pricing" className="py-16 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 mb-3 text-xs font-bold tracking-wider text-emerald-600 uppercase">
-            <span>100% Free · No Strings Attached</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight mb-4 text-balance">
-            Currently 100% Free for Every WooCommerce Store.
-          </h2>
-          <p className="text-slate-600 text-base leading-relaxed">
-            FlowCart is completely free to use. All 20 Elementor custom widgets, 1-page express checkout, incomplete order tracking, and fraud protection features are fully unlocked with zero subscription fees.
-          </p>
-        </div>
+export const Pricing: React.FC<PricingProps> = ({ onDownload }) => (
+  <section id="pricing" className="relative overflow-hidden bg-paper-2/70 py-20 sm:py-28">
+    <div className="mx-auto max-w-7xl px-5 sm:px-8">
+      <div className="mb-12 text-center" data-reveal>
+        <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.22em] text-ink/40">
+          Pricing
+        </p>
+        <h2 className="mx-auto max-w-2xl font-display text-[2.1rem] font-semibold leading-[1.02] tracking-[-0.03em] text-ink sm:text-[2.9rem]">
+          One price. And that price is
+          <span className="font-serif italic text-moss"> nothing.</span>
+        </h2>
+        <p className="mx-auto mt-5 max-w-md text-[14px] leading-relaxed text-ink/60">
+          No licence keys, no &quot;pro&quot; tier holding widgets hostage, no
+          credit card. Download the zip and it&apos;s yours.
+        </p>
+      </div>
 
-        {/* 3 Pillar Free Guarantee Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10 max-w-5xl mx-auto">
-          <div className="p-5 rounded-2xl border border-slate-200/90 bg-slate-50/50 flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-              <Sparkles className="w-5 h-5" />
-            </div>
+      <div className="mx-auto grid max-w-4xl gap-4 lg:grid-cols-[1.15fr_0.85fr]" data-reveal>
+        {/* ticket */}
+        <div className="relative overflow-hidden rounded-3xl border border-ink bg-white shadow-hard">
+          <div className="flex items-center justify-between border-b border-dashed border-ink/20 bg-lime px-6 py-4">
             <div>
-              <h4 className="text-sm font-bold text-slate-900 mb-1">
-                All 20 Widgets Included
-              </h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                No locked &quot;Pro&quot; tiers. Every single Elementor widget is free and ready to use on your store today.
+              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/55">
+                FlowCart · lifetime pass
+              </p>
+              <p className="font-display text-lg font-semibold text-ink">
+                Free edition
+              </p>
+            </div>
+            <div className="text-right">
+              <p className="font-display text-3xl font-semibold leading-none text-ink">৳0</p>
+              <p className="font-mono text-[9px] uppercase tracking-wider text-ink/55">
+                forever
               </p>
             </div>
           </div>
 
-          <div className="p-5 rounded-2xl border border-slate-200/90 bg-slate-50/50 flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-              <Layers className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-sm font-bold text-slate-900 mb-1">
-                Unlimited Store Activations
-              </h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Use it across your personal stores, staging servers, and client eCommerce websites with zero license limits.
-              </p>
-            </div>
-          </div>
-
-          <div className="p-5 rounded-2xl border border-slate-200/90 bg-slate-50/50 flex items-start gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
-              <Cpu className="w-5 h-5" />
-            </div>
-            <div>
-              <h4 className="text-sm font-bold text-slate-900 mb-1">
-                HPOS & AJAX Architecture
-              </h4>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Fully compatible with WooCommerce 9.x High-Performance Order Storage with high speed and zero bloat.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Free Download Card */}
-        <div className="max-w-3xl mx-auto rounded-3xl border-2 border-blue-600/30 bg-gradient-to-b from-blue-50/30 via-white to-white p-7 sm:p-10 shadow-xl relative overflow-hidden">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-100">
-            <div>
-              <span className="text-xs font-bold text-emerald-700 bg-emerald-100/70 px-3 py-1 rounded-full uppercase tracking-wider">
-                {FREE_EDITION.badge}
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
-                FlowCart Plugin v2.4
-              </h3>
-              <p className="text-xs text-slate-500 mt-1">
-                {FREE_EDITION.licenseText}
-              </p>
-            </div>
-
-            <div className="text-left sm:text-right">
-              <div className="flex items-baseline gap-1 sm:justify-end">
-                <span className="text-4xl sm:text-5xl font-black text-slate-900">
-                  $0
-                </span>
-                <span className="text-xs text-emerald-600 font-bold uppercase tracking-wider">
-                  / 100% Free
-                </span>
-              </div>
-              <div className="text-[11px] text-slate-500 font-medium">
-                No credit card required
-              </div>
-            </div>
-          </div>
-
-          {/* Features Checklist */}
-          <div className="py-6">
-            <div className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4">
-              Everything Unlocked in this Free Download:
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {FREE_EDITION.features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-2 text-xs text-slate-700">
-                  <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                  <span>{feature}</span>
-                </div>
+          <div className="px-6 py-6">
+            <ul className="grid gap-2.5 sm:grid-cols-2">
+              {INCLUDED.map((f) => (
+                <li key={f} className="flex items-start gap-2">
+                  <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-moss" strokeWidth={3} />
+                  <span className="text-[12px] leading-snug text-ink/70">{f}</span>
+                </li>
               ))}
+            </ul>
+
+            <button
+              onClick={onDownload}
+              className="group mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-ink py-3.5 text-sm font-semibold text-paper transition-transform hover:-translate-y-0.5"
+            >
+              <Download className="h-4 w-4" />
+              Download FlowCart free
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </button>
+            <p className="mt-3 text-center font-mono text-[9.5px] uppercase tracking-wider text-ink/40">
+              GPL · zip install · no telemetry
+            </p>
+          </div>
+        </div>
+
+        {/* side notes */}
+        <div className="grid gap-4">
+          {[
+            {
+              k: 'Unlimited stores',
+              v: 'Use it on your own shop, client sites and staging servers — no domain counting.'
+            },
+            {
+              k: 'No locked widgets',
+              v: 'Every widget listed on this page ships in the free zip. Nothing is upsold later.'
+            },
+            {
+              k: 'Open GPL licence',
+              v: 'Fork it, inspect it, extend it. Your store data never leaves your server.'
+            }
+          ].map((n) => (
+            <div
+              key={n.k}
+              className="rounded-2xl border border-ink/12 bg-white/70 px-5 py-4 transition-colors hover:border-ink/30"
+            >
+              <p className="font-display text-[14px] font-semibold text-ink">{n.k}</p>
+              <p className="mt-1.5 text-[11.5px] leading-relaxed text-ink/55">{n.v}</p>
             </div>
-          </div>
-
-          {/* Download Action Area */}
-          <div className="pt-6 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-3">
-            <button
-              type="button"
-              onClick={onDownloadFree}
-              className="w-full sm:flex-1 py-3.5 px-6 rounded-xl text-xs sm:text-sm font-bold bg-slate-900 hover:bg-slate-800 text-white shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-blue-600"
-            >
-              <Download className="w-4 h-4" />
-              <span>Download FlowCart Free (.zip)</span>
-            </button>
-            <button
-              type="button"
-              onClick={onOpenLiveDemo}
-              className="w-full sm:w-auto py-3.5 px-5 rounded-xl text-xs sm:text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors"
-            >
-              Explore Live Demo
-            </button>
-          </div>
-
-          <div className="mt-4 text-center text-[11px] text-slate-400 flex items-center justify-center gap-1.5">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Open GPL License · Safe direct WordPress installation · No ads or telemetry</span>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
